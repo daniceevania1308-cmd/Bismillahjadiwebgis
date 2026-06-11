@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#info-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 340px;
+    max-height: 90vh;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 18px;
+    z-index: 2;
+    overflow-y: auto;
+    pointer-events: auto;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #2c3e2f;
+    border-left: 5px solid #2c7a47;
+    padding-left: 10px;
+}
+
+#click-instruction {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+#detail-info {
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+#wilayah-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1e3c2c;
+    border-bottom: 2px dashed #aaa;
+    display: inline-block;
+}
+
+#detail-table {
+    width: 100%;
+    font-size: 0.85rem;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+#detail-table td {
+    padding: 6px 4px;
+}
+
+#detail-table td:first-child {
+    font-weight: bold;
+    width: 40%;
+    color: #2c3e2f;
+}
+
+.ctpi-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
+}
+
+canvas {
+    max-width: 100%;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.legend {
+    margin-top: 20px;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+.legend h4 {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.legend span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+    #info-panel {
+        width: 260px;
+        top: 10px;
+        right: 10px;
+        padding: 12px;
+        max-height: 85vh;
+    }
+    h2 { font-size: 1rem; }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Carbon Trade Potential Index - Kabupaten Malang</title>
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div id="info-panel">
+        <h2>📊 Carbon Trade Potential Index</h2>
+        <div id="panel-content">
+            <p id="click-instruction">✨ Klik pada suatu wilayah untuk melihat detail dan grafik</p>
+            <div id="detail-info">
+                <h3 id="wilayah-name">-</h3>
+                <table id="detail-table">
+                    <tr><td>Kecamatan:</td><td id="kecamatan">-</td></tr>
+                    <tr><td>Luas (Ha):</td><td id="luas">-</td></tr>
+                    <tr><td>Total Karbon (Ton):</td><td id="total-carbon">-</td></tr>
+                    <tr><td>Total CO₂ (Ton):</td><td id="total-co2">-</td></tr>
+                    <tr><td>AGB Mean (Mg/Ha):</td><td id="agb-mean">-</td></tr>
+                    <tr><td>NDVI Mean:</td><td id="ndvi-mean">-</td></tr>
+                    <tr><td>Kelas CTPI:</td><td id="kelas-ctpi" class="ctpi-badge">-</td></tr>
+                </table>
+            </div>
+            <canvas id="ctpi-chart" width="300" height="200"></canvas>
+            <div class="legend">
+                <h4>🎨 Legenda CTPI</h4>
+                <div><span style="background:#2c7a47;"></span> BERPOTENSI</div>
+                <div><span style="background:#ffc107;"></span> CUKUP</div>
+                <div><span style="background:#d9534f;"></span> SANGAT TIDAK</div>
+                <div><span style="background:#fd7e14;"></span> SANGAT BERPOTENSI</div>
+                <div><span style="background:#8a6d3b;"></span> KURANG</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
